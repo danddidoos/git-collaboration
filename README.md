@@ -1,2 +1,3 @@
 # git-collaboration
-prog black
+
+This repository is for practicing collaboration.
