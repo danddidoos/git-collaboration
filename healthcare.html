@@ -3,60 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How computing is improving healthcare diagnostics and research.">
     <title>Improving Healthcare</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: linear-gradient(135deg, #eef5ff 0%, #f7fbff 55%, #ffffff 100%);
-            min-height: 100vh;
-        }
-
-        .healthcare-card {
-            border: 0;
-            border-radius: 1rem;
-            overflow: hidden;
-        }
-
-        .healthcare-image {
-            width: 100%;
-            height: 100%;
-            min-height: 320px;
-            object-fit: cover;
-        }
-
-        .accent-line {
-            width: 4rem;
-            height: 0.25rem;
-            border-radius: 999px;
-            background-color: #0d6efd;
-        }
-    </style>
+    <link href="Main.css" rel="stylesheet">
 </head>
-<body>
-    <main class="container py-5">
-        <nav class="mb-4" aria-label="Breadcrumb">
-            <a href="Main.html" class="btn btn-outline-primary btn-sm">← Back to Home</a>
-        </nav>
+<body class="theme-night article-page">
+    <nav class="site-nav navbar sticky-top" aria-label="Healthcare page navigation">
+        <div class="container py-2">
+            <a class="navbar-brand d-flex align-items-center" href="Main.html">
+                <span class="brand-mark" aria-hidden="true">✦</span>
+                <span class="brand-name fw-bold">Explore</span>
+            </a>
+            <a class="btn btn-outline-light btn-sm" href="Main.html">← Back to Home</a>
+        </div>
+    </nav>
 
-        <article class="card healthcare-card shadow-lg mx-auto" style="max-width: 960px;">
-            <div class="row g-0">
-                <div class="col-lg-5">
-                    <img src="comphealthcare.jpg" class="healthcare-image" alt="Computing in healthcare">
-                </div>
-                <div class="col-lg-7">
-                    <div class="card-body p-4 p-md-5">
-                        <div class="accent-line mb-4"></div>
-                        <p class="text-primary fw-semibold text-uppercase small mb-2">Technology &amp; medicine</p>
-                        <h1 class="display-5 fw-bold mb-3">Improving Healthcare</h1>
-                        <p class="lead fs-6 text-secondary">Computing is helping healthcare professionals diagnose illness and understand patients more effectively.</p>
-                        <p>Algorithms can analyze medical images such as MRIs, CT scans, and X-rays, helping researchers identify patterns that support faster and more informed decisions.</p>
-                        <a href="https://cccblog.org/2025/06/05/computings-transformative-role-in-the-future-of-healthcare/" class="btn btn-primary px-4" target="_blank" rel="noopener noreferrer">
-                            Read the article
-                        </a>
+    <main class="article-main">
+        <div class="container py-5">
+            <article class="article-card">
+                <div class="row g-0 align-items-stretch">
+                    <div class="col-lg-6">
+                        <img src="comphealthcare.jpg" class="article-image" alt="Computing in healthcare">
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center">
+                        <div class="article-copy p-4 p-md-5">
+                            <p class="eyebrow mb-3">Technology &amp; medicine</p>
+                            <h1>Improving Healthcare</h1>
+                            <p class="article-lead">Computing is helping healthcare professionals diagnose illness and understand patients more effectively.</p>
+                            <p>Algorithms can analyze medical images such as MRIs, CT scans, and X-rays, helping researchers identify patterns that support faster and more informed decisions.</p>
+                            <a href="https://cccblog.org/2025/06/05/computings-transformative-role-in-the-future-of-healthcare/" class="btn btn-primary px-4" target="_blank" rel="noopener noreferrer">Read the article →</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </article>
+            </article>
+        </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
