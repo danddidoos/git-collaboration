@@ -1,0 +1,300 @@
+:root {
+    --ink: #f7f4ed;
+    --muted: #b7b0aa;
+    --primary: #f02d3a;
+    --background: #0c0b10;
+    --panel: #17151d;
+    --border: rgba(255, 255, 255, 0.16);
+    --accent: #f02d3a;
+    --accent-soft: rgba(240, 45, 58, 0.16);
+}
+
+body {
+    background: var(--background);
+    color: var(--ink);
+    font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    transition: background 0.8s ease, color 0.8s ease;
+}
+
+body::before {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    background-size: 7px 7px;
+    content: "";
+    inset: 0;
+    opacity: 0.08;
+    pointer-events: none;
+    position: fixed;
+    z-index: 10;
+}
+
+body.theme-archive {
+    --background: #11151a;
+    --panel: #1b2227;
+    --accent: #36d1c4;
+    --accent-soft: rgba(54, 209, 196, 0.15);
+}
+
+body.theme-reckoning {
+    --background: #210d13;
+    --panel: #2b1119;
+    --accent: #ff6b35;
+    --accent-soft: rgba(255, 107, 53, 0.15);
+}
+
+.site-nav {
+    background: rgba(12, 11, 16, 0.82);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    transition: background 0.8s ease;
+    z-index: 20;
+}
+
+.brand-mark {
+    color: var(--accent);
+    font-size: 1.6rem;
+    margin-right: 0.5rem;
+    transform: rotate(-12deg);
+    transition: color 0.8s ease;
+}
+
+.brand-name {
+    color: var(--ink);
+    font-size: 0.9rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.hero {
+    background: linear-gradient(115deg, var(--background) 0%, var(--background) 55%, var(--accent-soft) 100%);
+    min-height: 82vh;
+    padding: 7rem 0 6rem;
+    position: relative;
+    transition: background 0.8s ease;
+}
+
+.hero::after {
+    border: 1px solid var(--accent);
+    content: "";
+    height: 24rem;
+    opacity: 0.35;
+    position: absolute;
+    right: -9rem;
+    top: 8rem;
+    transform: rotate(38deg);
+    width: 24rem;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: color 0.8s ease;
+}
+
+.hero h1 {
+    font-size: clamp(3.2rem, 8vw, 7rem);
+    font-weight: 900;
+    letter-spacing: -0.08em;
+    line-height: 0.88;
+    max-width: 48rem;
+    text-transform: uppercase;
+}
+
+.hero-copy {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 36rem;
+}
+
+.btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #0c0b10;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: #0c0b10;
+}
+
+.btn {
+    border-radius: 0;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.intro-panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    box-shadow: 0.7rem 0.7rem 0 var(--accent);
+    color: var(--ink);
+    min-height: 20rem;
+    padding: 2.2rem;
+    position: relative;
+    transform: rotate(2deg);
+    transition: background 0.8s ease, box-shadow 0.8s ease;
+}
+
+.panel-icon {
+    color: var(--accent);
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+.resources {
+    background: var(--background);
+    padding: 7rem 0 8rem;
+    transition: background 0.8s ease;
+}
+
+.section-heading {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    text-transform: uppercase;
+}
+
+.resource-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 0;
+    height: 100%;
+    padding: 1.5rem;
+    position: relative;
+    transition: background 0.8s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.resource-card:hover {
+    border-color: var(--accent);
+    transform: translate(-4px, -4px) rotate(-1deg);
+}
+
+.resource-icon {
+    color: var(--accent);
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.resource-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.resource-card p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.resource-link {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.resource-link:hover {
+    color: var(--ink);
+    text-decoration: underline;
+}
+
+footer {
+    background: var(--panel);
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    transition: background 0.8s ease;
+}
+
+/* Shared article pages */
+.article-main,
+.communication-main {
+    background: linear-gradient(115deg, var(--background) 0%, var(--background) 55%, var(--accent-soft) 100%);
+    min-height: calc(100vh - 72px);
+}
+
+.article-card,
+.communication-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    box-shadow: 0.7rem 0.7rem 0 var(--accent);
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.article-copy,
+.communication-copy {
+    min-width: 0;
+    width: 100%;
+}
+
+.article-image,
+.communication-image {
+    display: block;
+    min-height: 30rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.article-copy h1,
+.communication-copy h1 {
+    font-size: clamp(2.25rem, 4.5vw, 4.5rem);
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    overflow-wrap: anywhere;
+    text-transform: uppercase;
+}
+
+.article-copy p:not(.eyebrow),
+.communication-copy p:not(.eyebrow) {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.article-copy .article-lead,
+.communication-copy .communication-lead {
+    color: var(--ink);
+    font-size: 1.15rem;
+}
+
+@media (max-width: 767.98px) {
+    .hero {
+        min-height: auto;
+        padding: 5rem 0 4rem;
+    }
+
+    .intro-panel {
+        margin-top: 1rem;
+        min-height: 15rem;
+    }
+
+    .panel-icon {
+        margin-bottom: 2rem;
+    }
+
+    .article-card,
+    .communication-card {
+        margin-top: 0;
+    }
+
+    .article-image,
+    .communication-image {
+        height: 16rem;
+        min-height: 0;
+    }
+
+    .article-copy,
+    .communication-copy {
+        padding: 2rem !important;
+    }
+}
