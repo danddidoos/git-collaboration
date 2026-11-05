@@ -5,6 +5,30 @@
     --content-accent-hover: #31547c;
     --content-background: #f3f6fa;
     --content-border: #dfe4ea;
+    --content-soft: #eaf0f7;
+    --content-table-stripe: #f3f6fa;
+}
+
+body.content-page.mental-health-page {
+    --content-ink: #285d3d;
+    --content-muted: #617365;
+    --content-accent: #477852;
+    --content-accent-hover: #285d3d;
+    --content-background: #edf5ee;
+    --content-border: #dce9de;
+    --content-soft: #e5efe6;
+    --content-table-stripe: #f4f8f4;
+}
+
+body.content-page.warwick-page {
+    --content-ink: #302543;
+    --content-muted: #6c6379;
+    --content-accent: #6848a1;
+    --content-accent-hover: #4d347e;
+    --content-background: #f5f2fa;
+    --content-border: #e2dced;
+    --content-soft: #ede8f5;
+    --content-table-stripe: #f8f6fb;
 }
 
 body.content-page {
@@ -51,6 +75,16 @@ body.content-page {
     font-size: clamp(2rem, 4vw, 2.4rem);
     font-weight: 700;
     line-height: 1.2;
+}
+
+.content-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--content-border);
+}
+
+.content-header .page-title {
+    margin-bottom: 0;
 }
 
 .content-page h2,
@@ -162,17 +196,17 @@ body.content-page {
 .content-table {
     --bs-table-color: var(--content-ink);
     --bs-table-border-color: var(--content-border);
-    --bs-table-striped-bg: #f3f6fa;
+    --bs-table-striped-bg: var(--content-table-stripe);
 }
 
 .content-table thead th {
-    background: #eaf0f7;
+    background: var(--content-soft);
     color: var(--content-ink);
     font-weight: 700;
 }
 
 .warwick-row td {
-    background: #eaf0f7;
+    background: var(--content-soft);
     color: var(--content-ink);
 }
 
@@ -180,7 +214,7 @@ body.content-page {
     padding: 1rem 1.25rem;
     border-left: 4px solid var(--content-accent);
     border-radius: 0.35rem;
-    background: #f3f6fa;
+    background: var(--content-soft);
 }
 
 .support-note h2 {
