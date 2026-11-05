@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Explore healthcare, university, and mental health resources.">
     <title>Explore | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="Main.css" rel="stylesheet">
 </head>
-<body class="theme-night">
+<body class="home-page">
     <nav class="site-nav navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
         <div class="container py-2">
-            <a class="navbar-brand d-flex align-items-center" href="Main.html">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <span class="brand-mark" aria-hidden="true">✦</span>
                 <span class="brand-name fw-bold">Explore</span>
             </a>
@@ -20,36 +23,34 @@
     </nav>
 
     <main>
-        <section class="hero" data-theme="theme-night">
+        <section class="hero">
             <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-7">
-                        <p class="eyebrow mb-3">Enter the night</p>
-                        <h1 class="mb-4">Take back your next step.</h1>
-                        <p class="hero-copy mb-4">A field guide to healthcare, university life, and mental health. Choose a subject and make your move.</p>
-                        <a class="btn btn-primary me-2" href="#resources">Explore resources <span aria-hidden="true">→</span></a>
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-lg-6">
+                        <h1 class="mb-3">Clear guidance for your next step.</h1>
+                        <p class="hero-copy mb-4">Explore practical information about healthcare, university life, and mental wellbeing, all in one place.</p>
+                        <a class="btn btn-primary me-2" href="#resources">Browse topics <span aria-hidden="true">→</span></a>
                     </div>
-                    <div class="col-lg-5">
-                        <div class="intro-panel">
-                            <div class="panel-icon" aria-hidden="true">◈</div>
-                            <p class="eyebrow mb-2">Case file 001</p>
-                            <h2 class="h3 fw-bold mb-0">The city is loud. Your next move can be clear.</h2>
-                        </div>
+                    <div class="col-lg-6">
+                        <figure class="hero-image-frame">
+                            <img class="hero-image" src="images/images.jpeg" alt="A signpost pointing to help, support, advice, and guidance">
+                        </figure>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="resources" id="resources" data-theme="theme-archive">
+        <section class="resources" id="resources">
             <div class="container">
                 <div class="mb-4">
-                    <p class="eyebrow mb-2">Choose your route</p>
-                    <h2 class="section-heading mb-2">Three ways forward</h2>
-                    <p class="text-secondary mb-0">Pick a file. Scroll deeper. Find what helps.</p>
+                    <p class="eyebrow mb-2">Explore topics</p>
+                    <h2 class="section-heading mb-2">Helpful information by subject</h2>
+                    <p class="text-secondary mb-0">Browse guides and support for health, study, and wellbeing.</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-md-4">
                         <article class="resource-card">
+                            <img class="resource-image" src="comphealthcare.jpg" alt="Healthcare professionals reviewing a scan together">
                             <div class="resource-icon" aria-hidden="true">＋</div>
                             <h3>Healthcare</h3>
                             <p>Find practical information and guidance to help you make informed healthcare choices.</p>
@@ -58,6 +59,7 @@
                     </div>
                     <div class="col-md-4">
                         <article class="resource-card">
+                            <img class="resource-image" src="warwick.jpg" alt="Warwick University crest">
                             <div class="resource-icon" aria-hidden="true">⌂</div>
                             <h3>Warwick University</h3>
                             <p>Learn more about university life, opportunities, and the Warwick community.</p>
@@ -66,6 +68,7 @@
                     </div>
                     <div class="col-md-4">
                         <article class="resource-card">
+                            <img class="resource-image" src="images/mental_health.jpeg" alt="Illustrated map of mental health topics and support">
                             <div class="resource-icon" aria-hidden="true">♡</div>
                             <h3>Mental Health</h3>
                             <p>Access supportive resources and information for looking after your mental wellbeing.</p>
@@ -76,31 +79,12 @@
             </div>
         </section>
     </main>
-<<<<<<< HEAD
-
-    <footer class="py-4" data-theme="theme-reckoning">
+    <footer class="py-4">
         <div class="container d-flex flex-column flex-sm-row justify-content-between gap-2">
             <span class="fw-semibold">Explore</span>
             <span>Useful information, all in one place.</span>
         </div>
     </footer>
-
-=======
-    <a href="Main.html" class="btn btn-primary mt-3">Back to Home</a>
->>>>>>> f8be33e (Changes to be committed:)
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const sections = document.querySelectorAll("[data-theme]");
-
-        const themeObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    document.body.className = entry.target.dataset.theme;
-                }
-            });
-        }, { threshold: 0.45 });
-
-        sections.forEach((section) => themeObserver.observe(section));
-    </script>
 </body>
 </html>
