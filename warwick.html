@@ -9,75 +9,33 @@
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous">
-    <style>
-      .glow-on-hover {
-        transition: box-shadow 0.25s ease, text-shadow 0.25s ease, transform 0.25s ease;
-      }
-
-      .glow-on-hover:hover {
-        box-shadow: 0 0 18px rgba(147, 51, 234, 0.75);
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.85);
-        transform: translateY(-2px);
-      }
-
-      img.glow-on-hover {
-        display: block;
-      }
-
-      .warwick-row td {
-        background: linear-gradient(90deg, #d4af37, #ffe58a, #d4af37);
-        color: #3d2b00;
-      }
-
-      .warwick {
-        flex: 0 0 150px;
-        margin-left: auto;
-      }
-
-      .back-button {
-        display: inline-block;
-        margin: 1rem;
-        padding: 0.5rem 1rem;
-        background-color: mediumpurple;
-        border: 2px solid #d4af37;
-        border-radius: 0.375rem;
-        color: #fff;
-        font-weight: 600;
-        text-decoration: none;
-      }
-
-      .back-button:hover {
-        background-color: purple;
-        color: #ffe58a;
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="content-pages.css" rel="stylesheet">
   </head>
-  <body>
-    <a class="back-button" href="index.html">← Back to Home</a>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"></script>
+  <body class="content-page warwick-page">
+    <nav class="content-nav navbar">
+      <div class="container py-2">
+        <a class="btn btn-outline-primary btn-sm" href="index.html">← Back to Home</a>
+      </div>
+    </nav>
 
-      
-  </body>
-</html>
+    <main class="container page-shell">
+      <header class="content-header">
+        <h1 class="page-title">Warwick University and its contribution to modern technology</h1>
+      </header>
 
-<div class = "container py-5">
-  <h2 class="glow-on-hover" style = "color:purple; background-color:mediumpurple; padding: 0px; margin: 0px;"><b>Warwick University and its contribution to modern technology</b></h2>
-</div>
-
-<div class = "container py-1">
-  <h3 class = "text-black glow-on-hover" style = "background-color:mediumpurple">The £700 million campus expansion</h3>
+      <section class="content-section">
+  <h3>The £700 million campus expansion</h3>
   <p>Warwick University is carrying out a £700 million campus expansion, the largest investment in its history.</p>
   <p>This expansion will focus on Social Sciences and STEM, helping to drive technology research and education.</p>
-  <img src = https://warwick.ac.uk/services/estates/science-engineering-precinct/proposal-s.jpg alt = "Warwick's Campus Expansion" class = "img-fluid glow-on-hover" style="width: 800px; height: 400px;">
-</div>
+  <img src="https://warwick.ac.uk/services/estates/science-engineering-precinct/proposal-s.jpg" alt="Warwick's Campus Expansion" class="img-fluid content-image">
+      </section>
 
-<div class = "container py-1">
-  <h3 class = "text-black glow-on-hover" style = "background-color: mediumpurple">The consistent research output</h3>
+      <section class="content-section">
+  <h3>The consistent research output</h3>
   <p>Warwick University is solidly within the Big 5 for UK Computer Science.</p>
-  <table class = "table">
+  <div class="table-responsive">
+  <table class="table table-striped content-table">
     <tr> <th>University</th> <th>Complete University Guide</th> <th>QS World Ranking</th></tr>
     <tr> <td>Cambridge University</td><td>2nd</td><td>8th</td></tr>
     <tr> <td>Oxford University</td><td>3rd</td><td>4th</td></tr>
@@ -85,28 +43,32 @@
     <tr><td>Imperial College London</td><td>1st</td><td>12th</td></tr>
     <tr class="warwick-row"><td><b>Warwick University</b></td><td><b>5th</b></td><td><b>84th</b></td></tr>
   </table>
-</div>
+  </div>
+      </section>
 
-<div class = "container py-1">
-  <h3 class = "text-black glow-on-hover" style = "background-color:mediumpurple">The impact of WMG</h3>
+      <section class="content-section">
+  <h3>The impact of WMG</h3>
   <p>WMG is a major academic department/research centre at Warwick.</p>
   <p>It serves as one of the UK's High Value Manufacturing Catapult centres.</p>
   <p>WMG offers apprenticeship programs, as well as direct research support for industrial partners.</p>
-  <img src="https://warwick.ac.uk/fac/sci/wmg/about/jjg_3226.jpeg" alt = "WMG" class = "img-fluid glow-on-hover" style="width: 800px; height: 400px;">
-</div>
+  <img src="https://warwick.ac.uk/fac/sci/wmg/about/jjg_3226.jpeg" alt="WMG" class="img-fluid content-image">
+      </section>
 
-<div class = "container py-1 d-flex align-items-center gap-4 flex-wrap">
+      <section class="content-section d-flex align-items-center gap-4 flex-wrap">
   <div class="flex-grow-1">
-    <h3 class = "text-black glow-on-hover" style = "background-color:mediumpurple">Warwick University</h3>
+    <h3>Warwick University</h3>
     <p>Warwick University is a leading research university in the UK.</p>
     <p>It has an A*A*A entry requirement with a strong TMUA.</p>
   </div>
-  <div class = "warwick glow-on-hover"
-style = "width: 150px;
-aspect-ratio: 0.69;
-position: relative;
-background: center/90% no-repeat;
-background-image: url('warwick.jpg');">
+  <div class="warwick-crest">
     <strong>Warwick University</strong>
   </div>
-</div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
