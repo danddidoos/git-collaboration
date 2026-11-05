@@ -31,6 +31,17 @@ body.content-page.warwick-page {
     --content-table-stripe: #f8f6fb;
 }
 
+body.content-page.healthcare-page {
+    --content-ink: #263344;
+    --content-muted: #5f6e7c;
+    --content-accent: #416b9c;
+    --content-accent-hover: #31547c;
+    --content-background: #f1f5f8;
+    --content-border: #dce5ec;
+    --content-soft: #e8f0f6;
+    --content-table-stripe: #f4f7fa;
+}
+
 body.content-page {
     min-height: 100vh;
     background: var(--content-background);
@@ -170,6 +181,72 @@ body.content-page {
     padding: clamp(1.5rem, 4vw, 2.5rem);
 }
 
+.healthcare-shell {
+    width: min(1120px, calc(100% - 2rem));
+    margin: clamp(1.5rem, 5vw, 4rem) auto;
+}
+
+.healthcare-feature {
+    overflow: hidden;
+    border: 1px solid var(--content-border);
+    border-radius: 0.75rem;
+    background: #fff;
+    box-shadow: 0 1.25rem 3rem rgb(38 51 68 / 8%);
+}
+
+.healthcare-copy {
+    padding: clamp(2rem, 5vw, 4.5rem);
+}
+
+.healthcare-copy .page-title {
+    max-width: 11ch;
+    margin-bottom: 1.25rem;
+    font-size: clamp(2.4rem, 5vw, 3.75rem);
+    letter-spacing: 0;
+}
+
+.healthcare-copy .content-lead {
+    max-width: 34rem;
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.healthcare-copy > p:not(.content-eyebrow, .content-lead) {
+    max-width: 34rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.75;
+}
+
+.healthcare-visual {
+    position: relative;
+    height: 100%;
+    min-height: 34rem;
+    background: var(--content-soft);
+}
+
+.healthcare-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 34rem;
+    object-fit: cover;
+}
+
+.healthcare-caption {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgb(255 255 255 / 55%);
+    border-radius: 0.4rem;
+    background: rgb(255 255 255 / 92%);
+    color: var(--content-ink);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
 .content-eyebrow {
     margin-bottom: 0.75rem;
     color: var(--content-accent) !important;
@@ -248,5 +325,28 @@ body.content-page {
     .content-card-media {
         height: 16rem;
         min-height: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .healthcare-visual,
+    .healthcare-image {
+        min-height: 24rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .healthcare-shell {
+        width: min(100% - 1.25rem, 1120px);
+        margin: 1rem auto 2rem;
+    }
+
+    .healthcare-copy {
+        padding: 1.75rem 1.5rem 2rem;
+    }
+
+    .healthcare-visual,
+    .healthcare-image {
+        min-height: 18rem;
     }
 }
